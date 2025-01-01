@@ -1,0 +1,248 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --ice-cold: #a0d2eb;
+  --freeze-purple: #e5eaf5;
+  --medium-purple: #d0bdf4;
+  --purple-pain: #8458B3;
+  --heavy-purple: #494d5f;
+}
+
+html {
+  background:var(--heavy-purple);
+}
+
+
+.app-container {
+  width:calc(100% - 32px);
+  height:calc(100vh - 32px);
+  margin:16px auto;
+  padding: 0 16px;
+  display:flex;
+  max-width:960px;
+}
+
+.border-effect {
+  border:1px solid var(--medium-purple);
+  border-radius:8px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px var(--purple-pain);
+  padding:16px;
+  background:var(--freeze-purple);
+  position:relative;
+}
+
+.app-library {
+  width:100%;
+  overflow:hidden;
+}
+
+aside {
+  margin-left:16px;
+  width:320px;
+  flex-shrink: 0;
+}
+
+.controls-container {
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  background: rgba(229,234,245,0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  padding-top:12px;
+  /* box-shadow: 0 0 12px 12px rgba(229,234,245,0.8); */
+}
+
+.controls-buttons-container {
+  display:flex;
+  justify-content:space-around;
+}
+
+.controls-play-buttons {
+  display:flex;
+  align-items: center;
+}
+
+.controls-play-buttons button {
+  background:transparent;
+  border:0;
+  cursor:pointer;
+  color:var(--heavy-purple);
+}
+
+.controls-play-buttons button:hover {
+  color:var(--purple-pain);
+}
+
+.material-symbols-outlined {
+  font-size:40px;
+}
+
+.large-button {
+  font-size:60px;
+}
+
+.wavesurfer-container {
+  margin:auto;
+  margin-bottom:6px;
+}
+
+.song-container {
+  display:flex;
+  background-color:var(--ice-cold);
+  padding:12px;
+  border-radius:12px;
+  margin-bottom:8px;
+}
+
+.song-container.is-selected {
+  background-color:var(--heavy-purple);
+}
+
+.song-container .song-image {
+  border-radius:8px;
+  overflow:hidden;
+  margin-right:16px;
+}
+
+.song-container .song-image img {
+  display:block;
+}
+
+.library-container {
+  overflow:scroll;
+  max-height:100%;
+}
+
+.library-container ul {
+  padding-bottom:155px;
+}
+
+.profile-image {
+  width:100px;
+  height:100px;
+  background-color:var(--heavy-purple);
+  margin:auto;
+  border-radius:50%;
+  margin-bottom:24px;
+}
+
+.profile-image img {
+  
+}
+
+.profile-share-links {
+  margin-bottom:32px;
+}
+
+.profile-share-links ul {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-share-links ul li {
+  margin-right:12px;
+  font-size:20px;
+}
+.profile-share-links ul li:last-child {
+  margin-right:0;
+}
+
+.profile-share-links ul li a {
+  color:var(--heavy-purple);
+}
+
+.profile-share-links ul li a:hover {
+  color:var(--purple-pain);
+}
+
+.profile-description {
+
+}
+
+.profile-description h2 {
+
+}
+
+.profile-description h3 {
+  
+}
+
+.profile-description h4 {
+  
+}
+
+.profile-description h5 {
+  
+}
+
+.profile-description p {
+  
+}
+
+.profile-description ul {
+  
+}
+
+.profile-description ol {
+  
+}
+
+.profile-description li {
+  
+}
+
+.profile-description blockquote {
+  
+}
