@@ -10,6 +10,7 @@ const App = () => {
   const [currentSong, setCurrentSong] = useState(0);
   const [songs, setSongs] = useState([]);
   const [isLoading, setIsLoading] = useState(true); 
+  const [profile, setProfile] = useState(null)
 
   const onPlayPause = () => {
     wavesurfer && wavesurfer.playPause();
@@ -54,8 +55,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log(window.wpData.songs)
     setSongs(window.wpData.songs);
+    setProfile(window.wpData.profile);
     setIsLoading(false);
   }, []);
 
@@ -75,7 +76,7 @@ const App = () => {
   }
 
   return (
-    <div className="app-container">
+    <div className="app-container roboto-regular">
       <div className="app-library border-effect">
         <Library songs={songs} currentSong={currentSong} isPlaying={isPlaying} sendDataToParent={handleDataFromChild} />
 
@@ -84,7 +85,7 @@ const App = () => {
             {songs.length > 0 && (
               <WavesurferPlayer
                 height={50}
-                width={500}
+                width={590}
                 waveColor={'#494d5f'}
                 progressColor={'#8458B3'}
                 barWidth="3"
@@ -116,7 +117,7 @@ const App = () => {
 
       <aside className="border-effect">
         <div className="profile-image">
-          <img src="" alt="" />
+          <img src={profile.image} alt="Br&en" />
         </div>
 
         <div className="profile-share-links">
@@ -149,10 +150,8 @@ const App = () => {
           </ul>
         </div>
 
-        <div className="profile-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut placerat turpis. Etiam elementum ipsum non sem sodales, eu vulputate purus aliquam. Sed a augue velit. Duis elementum odio vel lobortis vulputate. Morbi quis mi nec quam rhoncus imperdiet eget eget ex. Vivamus dolor nibh, maximus congue leo eget, aliquam ultrices sem. Integer vel arcu tellus. Nullam tempor ipsum dui.
-          </p>
+        <div className="profile-description" dangerouslySetInnerHTML={{__html: profile.content}}>
+
         </div>
       </aside>
     </div>

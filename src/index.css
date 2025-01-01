@@ -143,10 +143,12 @@ aside {
   padding:12px;
   border-radius:12px;
   margin-bottom:8px;
+  color:var(--heavy-purple);
 }
 
 .song-container.is-selected {
   background-color:var(--heavy-purple);
+  color:var(--ice-cold);
 }
 
 .song-container .song-image {
@@ -157,6 +159,7 @@ aside {
 
 .song-container .song-image img {
   display:block;
+  max-width:100%;
 }
 
 .library-container {
@@ -175,10 +178,11 @@ aside {
   margin:auto;
   border-radius:50%;
   margin-bottom:24px;
+  overflow:hidden;
 }
 
 .profile-image img {
-  
+  max-width:100%;
 }
 
 .profile-share-links {
@@ -208,7 +212,7 @@ aside {
 }
 
 .profile-description {
-
+  color:var(--heavy-purple);
 }
 
 .profile-description h2 {
@@ -228,7 +232,9 @@ aside {
 }
 
 .profile-description p {
-  
+  font-size:16px;
+  line-height:24px;
+  margin-bottom:20px;
 }
 
 .profile-description ul {
@@ -245,4 +251,31 @@ aside {
 
 .profile-description blockquote {
   
+}
+
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }

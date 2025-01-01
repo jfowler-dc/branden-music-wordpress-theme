@@ -10,8 +10,11 @@ const Library = ({songs, currentSong, isPlaying, sendDataToParent}) => {
     }
 
     const CurrentSongPlaying = (index) => {
-        if (isPlaying) {
-            return <span>Playing - </span>
+        console.log(index.song)
+        if (currentSong == index.song) {
+            if (isPlaying) {
+                return <span>Playing - </span>
+            }
         }
     }
 
@@ -27,17 +30,13 @@ const Library = ({songs, currentSong, isPlaying, sendDataToParent}) => {
         {songs.map((e, index) => (
             <li className={"song-container" + isSelected(index)} key={index} value={index} onClick={changeSong}>
                 <div className="song-image">
-                    <img style={{width:'100px'}} src={e.artUrl} alt={e.title} />
+                    <img style={{width:'100px'}} src={e.image} alt={e.title} />
                 </div>
 
                 <div className="song-content">
-                    {currentSong === index && (
-                        <span>
-                            <span>Selected - </span>
-                            <CurrentSongPlaying/>
-                        </span>
-                    )}
-                    {e.title} - {e.duration} 
+                    <h2 className="plus-jakarta-sans">{e.title}</h2>
+                    <span>{e.duration}</span>
+                    <CurrentSongPlaying song={index}/>
                 </div>
                 
             </li>
